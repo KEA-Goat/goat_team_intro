@@ -1,11 +1,20 @@
 import React from 'react';
+import logo from '../assets/img/logo.png'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+
+`
+
 
 const Home = () => {
+    
     return (
-    <div>
+    <Wrapper>
     <h1> &nbsp; GOAT </h1>
-    <img src={require('../img/logo.png').default} alt="logo" />
-    </div>
+    
+    <img src={logo} alt="logo" />
+    </Wrapper>
     )
 
 };
