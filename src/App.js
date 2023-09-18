@@ -3,7 +3,7 @@ import Nav from './pages/Nav';
 import Home from './pages/Home';
 import Vision from './pages/Vision';
 import Custom from './pages/Custom';
-import NoPage from './pages/NoPage';
+import Team from './pages/Team';
 
 function App() {
   return (
@@ -13,11 +13,13 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="vision" element={<Vision/>} />
           <Route path="custom" element={<Custom/>} />
-          <Route path="*" element={<NoPage/>} />
+          <Route path="team" element={<Team/>} />
         </Route>
       </Routes>
     </BrowserRouter>
+    
   );
+
 }
 
 export default App;
