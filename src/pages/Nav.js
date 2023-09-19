@@ -1,7 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import styled from 'styled-components';
-import './Nav.css'
 
 const Nav_div = styled.div`
     width :100%;
