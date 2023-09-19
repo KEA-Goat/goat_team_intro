@@ -7,6 +7,7 @@ const teamMembers = [
     name: '김성민',
     role: '팀 리더',
     email: '@example.com',
+    
   },
   {
     name: '김민수',
@@ -43,8 +44,11 @@ const TeamMember = styled.div`
 
 const headerStyle = {
   textAlign: 'center',
-//  backgroundColor:'black',
+//  backgroundColor:'rgb(158, 210, 160)',
   color:'black',
+}
+const bodyStyle = {
+//  backgroundColor: 'rgb(158, 210, 160'
 }
 const Team = () => {
   return (
@@ -52,8 +56,9 @@ const Team = () => {
       <div style={headerStyle}>
         <h1>Meet Our Team</h1>
       </div>
-          
-      <TeamContainer>
+
+      <div style={bodyStyle}>
+        <TeamContainer>
         {teamMembers.map((member, index) => (
           <TeamMember key={index}>
             <h2>{member.name}</h2>
@@ -62,6 +67,8 @@ const Team = () => {
           </TeamMember>
         ))}
       </TeamContainer>
+      </div>
+      
     </div>
   );
 };
