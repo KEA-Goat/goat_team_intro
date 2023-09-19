@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const VisionContainer = styled.div`
     border: 2px solid black; 
     padding: 20px; 
@@ -8,11 +9,11 @@ const VisionContainer = styled.div`
     font-size: 18px; 
 `;
 const Vision = () => {
-    
     return (
         <VisionContainer>
             <div className="Title">
                 <h1>GOAT팀의 비전</h1>
+
                 </div>
                 <ul> {}
                     <li style={{ marginBottom: '10px' }}>
@@ -32,6 +33,7 @@ const Vision = () => {
 );
 
     
+
 
 
 

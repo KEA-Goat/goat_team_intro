@@ -7,6 +7,7 @@ const teamMembers = [
     name: '김성민',
     role: '팀 리더',
     email: '@example.com',
+
     // img: "./assets/img/goat_red",
   },
   {
@@ -41,6 +42,7 @@ const TeamMember = styled.div`
   border: 1px solid #ccc;
   text-align: center;
 `;
+
 
 const headerStyle = {
   textAlign: 'center',
