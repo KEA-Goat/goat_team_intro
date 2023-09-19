@@ -11,9 +11,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Nav/> }>
           <Route index element={<Home/>} />
+          <Route path="team" element={<Team/>} />
           <Route path="vision" element={<Vision/>} />
           <Route path="custom" element={<Custom/>} />
-          <Route path="team" element={<Team/>} />
+
         </Route>
       </Routes>
     </BrowserRouter>

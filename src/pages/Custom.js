@@ -1,7 +1,8 @@
-import React from 'react';
-
-const Custom = () => {
-    return <h1> &nbsp; Custom </h1>
-};
+function Custom(){
+  return(
+    <h1>Hello</h1>
+  );
+}
+  
 
 export default Custom;

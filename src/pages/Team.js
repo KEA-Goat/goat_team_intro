@@ -7,6 +7,8 @@ const teamMembers = [
     name: '김성민',
     role: '팀 리더',
     email: '@example.com',
+
+    // img: "./assets/img/goat_red",
   },
   {
     name: '김민수',
@@ -41,17 +43,35 @@ const TeamMember = styled.div`
   text-align: center;
 `;
 
+
+const headerStyle = {
+  textAlign: 'center',
+//  backgroundColor:'rgb(158, 210, 160)',
+  color:'black',
+}
+const bodyStyle = {
+//  backgroundColor: 'rgb(158, 210, 160'
+}
 const Team = () => {
   return (
-    <TeamContainer>
-      {teamMembers.map((member, index) => (
-        <TeamMember key={index}>
-          <h2>{member.name}</h2>
-          <p>{member.role}</p>
-          <p>Email: {member.email}</p>
-        </TeamMember>
-      ))}
-    </TeamContainer>
+    <div>
+      <div style={headerStyle}>
+        <h1>Meet Our Team</h1>
+      </div>
+
+      <div style={bodyStyle}>
+        <TeamContainer>
+        {teamMembers.map((member, index) => (
+          <TeamMember key={index}>
+            <h2>{member.name}</h2>
+            <p>{member.role}</p>
+            <p>Email: {member.email}</p>
+          </TeamMember>
+        ))}
+      </TeamContainer>
+      </div>
+      
+    </div>
   );
 };
 
