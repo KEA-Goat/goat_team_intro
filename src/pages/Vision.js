@@ -10,6 +10,9 @@ const VisionContainer = styled.div`
     font-size: 18px; 
     background-color: black;
     color: white;
+
+  //  background-color: #27ae60;
+
 `;
 const Title = styled.div`
     display: flex;

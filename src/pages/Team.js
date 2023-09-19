@@ -45,7 +45,6 @@ const TeamMember = styled.div`
   width: 250px;
   margin: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
   text-align: center;
 `;
 
