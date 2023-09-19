@@ -7,7 +7,7 @@ const teamMembers = [
     name: '김성민',
     role: '팀 리더',
     email: '@example.com',
-    
+    // img: "./assets/img/goat_red",
   },
   {
     name: '김민수',
