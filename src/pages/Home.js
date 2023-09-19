@@ -20,6 +20,7 @@ const Home = () => {
         backgroundColor:'black',
         color:'white',
         height:'100vh',
+        //height:'100%',
     };
 
     return (

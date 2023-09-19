@@ -10,25 +10,25 @@ const teamMembers = [
   {
     name: '김성민',
     role: '팀 리더',
-    email: '@example.com',
+    email: 'epicuros18@gmail.com',
     img: img1,
   },
   {
     name: '김민수',
     role: '프론트엔드',
-    email: '@example.com',
+    email: 'ms987796@gmail.com',
     img: img2,
   },
   {
     name: '신민서',
     role: '프론트엔드',
-    email: '@example.com',
+    email: 'minseo9451@gmail.com',
     img: img3,
   },
   {
     name: '강예진',
     role: '백엔드',
-    email: '@example.com',
+    email: 'yejin331@gachon.ac.kr',
     img: img4,
   },
 ];
@@ -52,7 +52,7 @@ const TeamMember = styled.div`
 
 const headerStyle = {
   textAlign: 'center',
-//  backgroundColor:'rgb(158, 210, 160)',
+  backgroundColor:'rgb(158, 210, 160)',
   color:'black',
 }
 const bodyStyle = {
@@ -62,7 +62,7 @@ const Team = () => {
   return (
     <div>
       <div style={headerStyle}>
-        <h1>Meet Our Team</h1>
+        <h1>Contact Our Team</h1>
       </div>
 
       <div style={bodyStyle}>
