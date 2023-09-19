@@ -1,10 +1,12 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+
+
 
 const Nav_div = styled.div`
     width :100%;
-    background-color:black;
+    background-color: ${(props) => props.backgroundColor || 'black'};
     padding: 15px 0px;
     text-align :right;
 `
@@ -16,20 +18,31 @@ const Nav_Link = styled(Link)`
 `
 
 const Nav = () => {
+    const location = useLocation();//이부분이 페이지별 메뉴바 색상 지정
+    const backgroundColor =
+    location.pathname === '/'
+    ? 'black'
+    : location.pathname === '/team'
+    ? 'black'
+    : location.pathname === '/vision'
+    ? 'black'
+    : location.pathname === '/custom'
+    ? 'black'
+    : 'black';
 
     return (
         <>
 
-        <nav>
-            <Nav_div>
-                <Nav_Link to="/"> Home </Nav_Link>
-                <Nav_Link to="/team"> Members </Nav_Link>
-                <Nav_Link to="/vision"> Vision </Nav_Link>
-                <Nav_Link to="/custom"> Custom </Nav_Link>
-            </Nav_div>
-        </nav>
+            <nav>
+                <Nav_div backgroundColor={backgroundColor}>
+                    <Nav_Link to="/"> Home </Nav_Link>
+                    <Nav_Link to="/team"> Members </Nav_Link>
+                    <Nav_Link to="/vision"> Vision </Nav_Link>
+                    <Nav_Link to="/custom"> Custom </Nav_Link>
+                </Nav_div>
+            </nav>
 
-        <Outlet/>
+            <Outlet />
         </>
 
     );

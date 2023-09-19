@@ -1,12 +1,9 @@
 import React from 'react';
 import logo from '../assets/img/logoWhite.png'
-
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-
 `
-
 
 const Home = () => {
     const centerStyle={
