@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import img1 from '../assets/img/goat_red.png';
+import img2 from '../assets/img/goat_yellow.png';
+import img3 from '../assets/img/goat_blue.png';
+import img4 from '../assets/img/goat_pink.png';
 
 // 팀원 정보를 나타내는 데이터 배열 (4명의 팀원 예시)
 const teamMembers = [
@@ -7,22 +11,25 @@ const teamMembers = [
     name: '김성민',
     role: '팀 리더',
     email: '@example.com',
-    // img: "./assets/img/goat_red",
+    img: img1,
   },
   {
     name: '김민수',
     role: '프론트엔드',
     email: '@example.com',
+    img: img2,
   },
   {
     name: '신민서',
     role: '프론트엔드',
     email: '@example.com',
+    img: img3,
   },
   {
     name: '강예진',
     role: '백엔드',
     email: '@example.com',
+    img: img4,
   },
 ];
 
@@ -48,7 +55,7 @@ const headerStyle = {
   color:'black',
 }
 const bodyStyle = {
-//  backgroundColor: 'rgb(158, 210, 160'
+  backgroundColor: 'rgb(158, 210, 160'
 }
 const Team = () => {
   return (
@@ -61,6 +68,7 @@ const Team = () => {
         <TeamContainer>
         {teamMembers.map((member, index) => (
           <TeamMember key={index}>
+            <img src ={member.img}></img>
             <h2>{member.name}</h2>
             <p>{member.role}</p>
             <p>Email: {member.email}</p>
