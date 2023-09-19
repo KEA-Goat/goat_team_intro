@@ -1,36 +1,29 @@
 import React from 'react';
-import logo from '../assets/img/logoWhite.png'
-
+import logo from '../assets/img/logoWhite.png' // 로고 크기 25% 증가
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-
+const ContainerStyle = styled.div`
+    text-Align: center;
+    background-Color: black;
+    color: white;
+    height: 100vh;
 `
 
+const CenterStyle = styled.div`
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+`
 
 const Home = () => {
-    const centerStyle={
-        position: 'absolute',
-        left:'50%',
-        top: '50%',
-        transform: 'translate(-50%, -50%',
-    };
-    const containerStyle={
-        textAlign: 'center',
-        backgroundColor:'black',
-        color:'white',
-        height:'100vh',
-    };
-
     return (
-        <div style={containerStyle}>
-            {/* <h1> &nbsp; GOAT </h1> */}
-            <div style={centerStyle}>
+        <ContainerStyle>
+            <CenterStyle>
                 <img src={logo} alt="logo" />
-            </div>
-        </div>
+            </CenterStyle>
+        </ContainerStyle>
     )
-
 };
 
 export default Home;
