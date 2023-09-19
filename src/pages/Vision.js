@@ -7,6 +7,7 @@ const VisionContainer = styled.div`
     padding: 20px; 
     line-height: 1.5; 
     font-size: 18px; 
+    background-color: #27ae60;
 `;
 const Vision = () => {
     return (
