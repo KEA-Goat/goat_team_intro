@@ -49,6 +49,7 @@ const TeamMember = styled.div`
   text-align: center;
 `;
 
+
 const headerStyle = {
   textAlign: 'center',
 //  backgroundColor:'rgb(158, 210, 160)',

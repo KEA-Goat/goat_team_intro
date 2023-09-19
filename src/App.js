@@ -14,10 +14,13 @@ function App() {
           <Route path="team" element={<Team/>} />
           <Route path="vision" element={<Vision/>} />
           <Route path="custom" element={<Custom/>} />
+
         </Route>
       </Routes>
     </BrowserRouter>
+    
   );
+
 }
 
 export default App;
