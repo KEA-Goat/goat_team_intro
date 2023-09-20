@@ -39,6 +39,7 @@ const TeamContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
+  height: 100vh;
 `;
 
 const TeamMember = styled.div`

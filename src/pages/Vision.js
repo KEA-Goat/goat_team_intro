@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/img/logoWhite.png'
 
@@ -10,7 +10,15 @@ const VisionContainer = styled.div`
     font-size: 18px; 
     background-color: black;
     color: white;
+    height: 100vh;
 
+
+    width:${props => props.containerWidth}px;
+    height:${props => props.containerHeight}px;
+    display:flex;
+    flex-direction:column;
+    judtify-content:center;
+    //align-items:center;
   //  background-color: #27ae60;
 
 `;
@@ -20,29 +28,52 @@ const Title = styled.div`
     flex-direction: row;
 `;
 const Title1 = styled.div`
-    font-size: 70px;
+    font-size: 65px;
     padding: 30px;
     margin-top: 70px;
 `;
 const Title2 = styled.div`
-    font-size: 95px;
+    font-size: 85px;
     padding: 20px;
     margin-top: -50px;
 `;
 
-const LogoImg = styled.div`
-    left: 100%;
-    transform:translateX(-50%);
-`
+
 const Content = styled.div`
     text-align: center;
     font-size: 30px;
     margin-top: 20px;
 `;
 
+const LogoImgStyle = styled.div`
+    margin-left:auto;
+    width: 600px;
+`;
+
 const Vision = () => {
+    const [containerWidth, setContainerWidth] = useState(window.innerWidth);
+    const [containerHeight, setContainerHeight] = useState(window.innerHeight);
+    
+    useEffect(()=>{
+        const handleResize=()=>{
+            setContainerWidth(window.innerWidth);
+            setContainerHeight(window.innerHeight);
+        };
+
+
+        window.addEventListener('resize', handleResize);
+        
+        return ()=>{
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []
+    
+);
+
+
+// containerWidth={containerWidth} containerHeight = {containerHeight}
     return (
-        <VisionContainer>
+        <VisionContainer >
             <Title>
             <div style={{
                     width:'1500px',
@@ -55,9 +86,12 @@ const Vision = () => {
                 Greator Of All Team
             </Title2>
             </div>
-            <div style={{
-                    width: '55% '
-                }}><img src={logo} alt="logo"/></div>
+            {/* <div style={{
+                    width: '55% ',
+                }}><img src={logo} alt="logo" /></div> */}
+            <LogoImgStyle>
+                <img src = {logo} alt = "logo"/>
+            </LogoImgStyle>
             </Title>
             
             <Content>
