@@ -13,8 +13,7 @@ const VisionContainer = styled.div`
     height: 100vh;
 
 
-    width:${props => props.containerWidth}px;
-    height:${props => props.containerHeight}px;
+
     display:flex;
     flex-direction:column;
     judtify-content:center;
@@ -51,25 +50,7 @@ const LogoImgStyle = styled.div`
 `;
 
 const Vision = () => {
-    const [containerWidth, setContainerWidth] = useState(window.innerWidth);
-    const [containerHeight, setContainerHeight] = useState(window.innerHeight);
     
-    useEffect(()=>{
-        const handleResize=()=>{
-            setContainerWidth(window.innerWidth);
-            setContainerHeight(window.innerHeight);
-        };
-
-
-        window.addEventListener('resize', handleResize);
-        
-        return ()=>{
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []
-    
-);
-
 
 // containerWidth={containerWidth} containerHeight = {containerHeight}
     return (
