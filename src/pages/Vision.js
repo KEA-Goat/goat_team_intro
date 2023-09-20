@@ -24,7 +24,7 @@ const VisionContainer = styled.div`
 `;
 const Title = styled.div`
     display: flex;
-    flex: 1;
+   // flex: 1;
     flex-direction: row;
 `;
 const Title1 = styled.div`
