@@ -10,6 +10,7 @@ const VisionContainer = styled.div`
     font-size: 18px; 
     background-color: black;
     color: white;
+    height: 100vh;
 
 
     width:${props => props.containerWidth}px;
@@ -37,10 +38,7 @@ const Title2 = styled.div`
     margin-top: -50px;
 `;
 
-const LogoImg = styled.div`
-    left: 100%;
-    transform:translateX(-50%);
-`
+
 const Content = styled.div`
     text-align: center;
     font-size: 30px;
@@ -73,9 +71,9 @@ const Vision = () => {
 );
 
 
-
+// containerWidth={containerWidth} containerHeight = {containerHeight}
     return (
-        <VisionContainer containerWidth={containerWidth} containerHeight = {containerHeight}>
+        <VisionContainer >
             <Title>
             <div style={{
                     width:'1500px',
