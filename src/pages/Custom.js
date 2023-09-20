@@ -60,11 +60,10 @@ const TextContainer =styled.div`
   width:75vh;
 `
 const ButtonContainer = styled.div`
-  //background:black;
-  color:white;
+  display:felx;
   text-align: left;
   align-item:left;
-  font-size:small;
+  background: black;
 `;
 
 
@@ -72,12 +71,9 @@ const ImgContainer = styled.div`
 
 `;
 const ContentsContainer = styled.div`
-  width: 250px;
-  margin: 20px;
-  padding: 10px;
-  text-align: center;
-  background: black;
+  text-align: left;
   color:white;
+  align-item:center;
 `;
 
 
@@ -103,15 +99,14 @@ const Custom = () => {
     </TopContainer>
 
     <BottomContainer>
-      {/* {contents.map({content, index} => (
-        <ContentsContainer key = {index}>
-           <img src={member.img} alt={member.name} />
-           <h2>{contents.name}</h2>
-           <p>{contents.role}</p>
-           <p>{contents.text}</p>
-        </ContentsContainer>
-
-      ))} */}
+      {contents.map((contentr, index) => (
+      <ContentsContainer key={index}>
+        <img src={contents.img} alt={contents.name} />
+        <h2>{contents.name}</h2>
+        <p>{contents.text}</p>
+      </ContentsContainer>
+      ))}
+       
     </BottomContainer>
   </MainContainer>
 
