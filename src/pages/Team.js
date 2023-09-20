@@ -48,35 +48,28 @@ const TeamMember = styled.div`
   text-align: center;
 `;
 
+const Body = styled.div`
+  background-color: rgb(158, 210, 160);
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  padding: 20px; /* 위아래 여백 추가 */
+`;
 
-const headerStyle = {
-  textAlign: 'center',
-  backgroundColor:'rgb(158, 210, 160)',
-  color:'black',
-}
-const bodyStyle = {
-  backgroundColor: 'rgb(158, 210, 160'
-}
 const Team = () => {
   return (
     <div>
-      <div style={headerStyle}>
-        <h1>Contact Our Team</h1>
-      </div>
-
-      <div style={bodyStyle}>
+      <Body>
+        <h1>Contact Our Team</h1> {/* Contact Our Team 텍스트 추가 */}
         <TeamContainer>
-        {teamMembers.map((member, index) => (
-          <TeamMember key={index}>
-            <img src ={member.img}></img>
-            <h2>{member.name}</h2>
-            <p>{member.role}</p>
-            <p>Email: {member.email}</p>
-          </TeamMember>
-        ))}
-      </TeamContainer>
-      </div>
-      
+          {teamMembers.map((member, index) => (
+            <TeamMember key={index}>
+              <img src={member.img} alt={member.name} />
+              <h2>{member.name}</h2>
+              <p>{member.role}</p>
+              <p>Email: {member.email}</p>
+            </TeamMember>
+          ))}
+        </TeamContainer>
+      </Body>
     </div>
   );
 };
